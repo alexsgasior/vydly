@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import _ from "lodash";
 import Movie from "../movies";
 
@@ -25,6 +26,12 @@ const Pagination = props => {
       </ul>
     </nav>
   );
+};
+Pagination.propTypes = {
+  itemsCount: PropTypes.number.isRequired,
+  pageSize: PropTypes.number.isRequired,
+  currentPage: PropTypes.number.isRequired,
+  onPageChange: PropTypes.number.isRequired
 };
 
 export default Pagination;
